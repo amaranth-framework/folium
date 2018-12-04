@@ -15,29 +15,37 @@
  * limitations under the License.
  */
 
-namespace Itmcdev\Folium\Operation;
+namespace Itmcdev\Folium\Controller;
 
-/**
- * Undocumented class
- */
-class Operation
+use Itmcdev\Folium\Operation\Exception\UndefinedOperation;
+
+trait Controller
 {
-    private $_modelClass = null;
-
     /**
-     * Constructor
+     * Magic function for calling methods
      *
-     * @param string $modelClass Class name used for model.
+     * @throws UndefinedOperation
+     *
+     * @param  string $method
+     * @param  array  $arguments
+     * @return any
      */
-    public function __construct(string $modelClass)
+    public function __call(string $method, array $arguments)
     {
-        $this->_modelClass = $modelClass;
+        if (array_search($method, self::operations()) !== false) {
+            return call_user_func_array(
+                array($this->$method, $method),
+                $arguments
+            );
+        }
+
+        throw new UndefinedOperation($this, $method, $arguments);
     }
 
     /**
-     * Setter for a model's class
+     * Setter for controller's model class
      *
-     * @param string $modelClass Class name used for model.
+     * @param  string $modelClass Class name used for model
      * @return self
      */
     public function setModelClass(string $modelClass)

@@ -15,21 +15,26 @@
  * limitations under the License.
  */
 
-namespace Itmcdev\Folium\Util;
+namespace Itmcdev\Folium\Exception;
 
 /**
- * Undocumented class
+ * Exception used for cases data fails creating.
  */
-class ArrayUtils
+class UndefinedOperation extends \Exception
 {
     /**
-     * @param array $arr
-     * @return boolean
+     * @param any $controller
+     * @param str $method
      */
-    static function isNumeric(array $arr)
+    public function __construct($class, $method, $arguments)
     {
-        return (
-            $arr === array() || range(0, count($arr) - 1) === array_keys($arr)
+        parent::__construct(
+            sprintf(
+                'Undefined operation call in %s::%s(%s)',
+                get_class($class),
+                $method,
+                json_encode($arguments)
+            )
         );
     }
 }

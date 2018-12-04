@@ -15,21 +15,25 @@
  * limitations under the License.
  */
 
-namespace Itmcdev\Folium\Util;
+namespace Itmcdev\Folium\Exception;
 
 /**
- * Undocumented class
+ * Exception used for cases where controller's model type is not detected.
  */
-class ArrayUtils
+class UnspecifiedModel extends \Exception
 {
     /**
-     * @param array $arr
-     * @return boolean
+     * @param any $controller
+     * @param str $method
      */
-    static function isNumeric(array $arr)
+    public function __construct(any $controller, str $method)
     {
-        return (
-            $arr === array() || range(0, count($arr) - 1) === array_keys($arr)
+        parent::__construct(
+            sprintf(
+                'Unspecified $_modelClass parameter under `%s::%s()` method.',
+                get_class($controller),
+                $method
+            )
         );
     }
 }

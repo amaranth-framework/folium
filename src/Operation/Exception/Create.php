@@ -15,34 +15,19 @@
  * limitations under the License.
  */
 
-namespace Itmcdev\Folium\Operation;
+namespace Itmcdev\Folium\Operation\Exception;
 
 /**
- * Undocumented class
+ * Exception used for cases data fails creating.
  */
-class Operation
+class Create extends \Exception
 {
-    private $_modelClass = null;
-
     /**
-     * Constructor
-     *
-     * @param string $modelClass Class name used for model.
+     * @param any $controller
+     * @param str $method
      */
-    public function __construct(string $modelClass)
+    public function __construct()
     {
-        $this->_modelClass = $modelClass;
-    }
-
-    /**
-     * Setter for a model's class
-     *
-     * @param string $modelClass Class name used for model.
-     * @return self
-     */
-    public function setModelClass(string $modelClass)
-    {
-        $this->modelClass = $modelClass;
-        return $this;
+        parent::__construct('Failed creating data.');
     }
 }

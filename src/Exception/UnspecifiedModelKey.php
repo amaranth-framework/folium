@@ -15,21 +15,29 @@
  * limitations under the License.
  */
 
-namespace Itmcdev\Folium\Util;
+namespace Itmcdev\Folium\Exception;
 
 /**
- * Undocumented class
+ * Exception used for cases where controller's model type is not detected.
  */
-class ArrayUtils
+class UnspecifiedModelKey extends \Exception
 {
     /**
-     * @param array $arr
-     * @return boolean
+     * @param any $controller
+     * @param str $method
      */
-    static function isNumeric(array $arr)
-    {
-        return (
-            $arr === array() || range(0, count($arr) - 1) === array_keys($arr)
+    public function __construct(
+        string $modelClass,
+        any $controller,
+        str $method
+    ) {
+        parent::__construct(
+            sprintf(
+                'Unspecified primary key in model %s, parameter under `%s::%s()` method.',
+                $modelClass,
+                get_class($controller),
+                $method
+            )
         );
     }
 }

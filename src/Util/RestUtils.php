@@ -20,23 +20,22 @@ namespace Itmcdev\Folium\Util\Rest;
 include Itmcdev\Folium\Http\JsonResponse;
 
 /**
- * NOTE: The bellow comment conviced me to not use HTTP statuses along with REST errors, and create my own set of 
+ * NOTE: The bellow comment conviced me to not use HTTP statuses along with REST errors, and create my own set of
  * error codes.
- * 
+ *
  * @link https://stackoverflow.com/a/46379701/665019
  */
 class RestUtils
 {
-
     static $operands = [
         '$eq' => '=',
         '$ge' => '>=',
         '$gt' => '>',
-        '$in' => NULL,
+        '$in' => null,
         '$ne' => '<>',
         '$le' => '<=',
         '$like' => 'LIKE',
-        '$lt' => '<',
+        '$lt' => '<'
     ];
 
     const STATUS_SUCCESS = 'success';
@@ -53,7 +52,7 @@ class RestUtils
     const HTTP_OK = 200;
 
     /**
-     * Example of Request to criteria array method. 
+     * Example of Request to criteria array method.
      * NOTE: This method will function with most SQL based languages. Please addapt it for other query languages you use
      * based on their syntax.
      *
@@ -63,13 +62,13 @@ class RestUtils
     public static function requestToCriteria(Request $request)
     {
         $params = $request->query->all();
-        if (! empty($params['__count'])) {
+        if (!empty($params['__count'])) {
             delete($params['__count']);
         }
 
         $params = array_map(null, array_keys($params), array_values($params));
 
-        return array_map(function($set) {
+        return array_map(function ($set) {
             list($field, $value) = $set;
 
             if (preg_match('/([^\[]+)\[([^\]]+)\]/i', $field, $matches)) {
@@ -92,11 +91,14 @@ class RestUtils
      */
     public static function respondWithSuccess($data)
     {
-        return new JsonResponse([
-            'data' => $data,
-            'status' => self::STATUS_SUCCESS,
-            'code' => self::CODE_OK,
-        ], self::HTTP_OK);
+        return new JsonResponse(
+            [
+                'data' => $data,
+                'status' => self::STATUS_SUCCESS,
+                'code' => self::CODE_OK
+            ],
+            self::HTTP_OK
+        );
     }
 
     /**
@@ -107,25 +109,37 @@ class RestUtils
      * @return JsonResponse
      */
     // static function respondWithError($error, $status = self::HTTP_BAD_REQUEST)
-    public static function respondWithError($error, $code = self::CODE_GENERIC_ERROR, $status = self::HTTP_OK)
-    {
-        return new JsonResponse([
-            'message' => $error,
-            'status' => self::STATUS_ERROR,
-            'code' => $code,
-        ], $status);
+    public static function respondWithError(
+        $error,
+        $code = self::CODE_GENERIC_ERROR,
+        $status = self::HTTP_OK
+    ) {
+        return new JsonResponse(
+            [
+                'message' => $error,
+                'status' => self::STATUS_ERROR,
+                'code' => $code
+            ],
+            $status
+        );
     }
 
     public static function respondWithInvalidMethod()
     {
         // return self::respondWithError('Invalid Request Method.', self::HTTP_METHOD_NOT_ALLOWED);
-        return self::respondWithError('Invalid Request Method.', self::CODE_INVALID_REQUEST_TYPE);
+        return self::respondWithError(
+            'Invalid Request Method.',
+            self::CODE_INVALID_REQUEST_TYPE
+        );
     }
 
     public static function respondWithUnspecifiedModel()
     {
         // return self::respondWithError('Invalid Model Instance.', self::HTTP_CONFLICT);
-        return self::respondWithError('Invalid Model Instance.', self::CODE_INVALID_MODEL_INSTANCE);
+        return self::respondWithError(
+            'Invalid Model Instance.',
+            self::CODE_INVALID_MODEL_INSTANCE
+        );
     }
 
     public static function respondWithValidationError($message)
@@ -145,6 +159,9 @@ class RestUtils
 
     public static function respondWithUnknownError()
     {
-        return self::respondWithError('Uncaught error.', self::CODE_UNKNOWN_ERROR);
+        return self::respondWithError(
+            'Uncaught error.',
+            self::CODE_UNKNOWN_ERROR
+        );
     }
 }

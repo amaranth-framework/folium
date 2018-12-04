@@ -15,21 +15,32 @@
  * limitations under the License.
  */
 
-namespace Itmcdev\Folium\Util;
+namespace Itmcdev\Folium\Exception;
 
 /**
- * Undocumented class
+ * Exception used for cases where data validation failed.
  */
-class ArrayUtils
+class Validation extends \Exception
 {
     /**
-     * @param array $arr
-     * @return boolean
+     * @var array
      */
-    static function isNumeric(array $arr)
+    private $errors = [];
+
+    /**
+     * @param array $errors
+     */
+    public function __construct($errors)
     {
-        return (
-            $arr === array() || range(0, count($arr) - 1) === array_keys($arr)
-        );
+        parent::__construct('Data validation failed.');
+        $this->errors = $errors;
+    }
+
+    /**
+     * @return array
+     */
+    public function getErrors()
+    {
+        return $this->errors;
     }
 }

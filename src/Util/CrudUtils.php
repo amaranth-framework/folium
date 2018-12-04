@@ -28,11 +28,12 @@ class CrudUtils
      * @param array $item
      * @return array(string, array)
      */
-    static public function parseCriteriaItem($item) {
+    public static function parseCriteriaItem($item)
+    {
         // by default, use where*
         $where = 'where';
         $whereIn = 'whereIn';
-        
+
         $or = array_values(array_slice($item, -1))[0];
         // if or found, use orWhere*
         if (is_string($or) && strtolower($or) === 'or') {
@@ -43,21 +44,18 @@ class CrudUtils
 
         $value = array_values(array_slice($item, -1))[0];
         // if value added to condition use where*
-        if (! is_array($value)) {
+        if (!is_array($value)) {
             return [$where, $item];
         } else {
             return [$whereIn, $item];
         }
     }
 
-    static public function patchRules($rules, $keys)
+    public static function patchRules($rules, $keys)
     {
         return array_intersect_key(
-            $rules, 
-            array_flip(array_intersect(
-                array_keys($rules),
-                $keys
-            ))
+            $rules,
+            array_flip(array_intersect(array_keys($rules), $keys))
         );
     }
 
@@ -65,7 +63,11 @@ class CrudUtils
      * @param string $model
      * @return boolean
      */
-    static public function canSoftDelete($modelClass) {
-        return method_exists($modelClass, 'canSoftDelete') && $modelClass::canSoftDelete();
+    public static function canSoftDelete($modelClass)
+    {
+        return (
+            method_exists($modelClass, 'canSoftDelete') &&
+            $modelClass::canSoftDelete()
+        );
     }
 }
