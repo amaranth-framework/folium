@@ -1,0 +1,29 @@
+{
+    "name": "itmcdev/folium",
+    "description": "PHP Wrapper for RESTFul applications",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dragos Cirjan",
+            "email": "dragos.cirjan@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.1"
+    },
+    "autoload": {
+        "classmap": [
+        ],
+        "psr-4": {
+            "Itmcdev\\Folium\\": "src/"
+        }
+    },
+    "require-dev": {
+        "tightenco/tlint": "^2.1"
+    },
+    "scripts": {
+        "lint": " ./vendor/bin/tlint lint src"
+    }
+}
