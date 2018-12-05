@@ -25,5 +25,4 @@ namespace Itmcdev\Folium\Operation\Rest;
  */
 interface Delete extends \Itmcdev\Folium\Operation\Crud\Delete
 {
-
 }

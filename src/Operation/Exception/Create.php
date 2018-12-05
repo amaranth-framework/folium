@@ -23,8 +23,7 @@ namespace Itmcdev\Folium\Operation\Exception;
 class Create extends \Exception
 {
     /**
-     * @param any $controller
-     * @param str $method
+     * Constructor
      */
     public function __construct()
     {

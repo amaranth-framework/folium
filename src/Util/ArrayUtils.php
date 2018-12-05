@@ -26,7 +26,7 @@ class ArrayUtils
      * @param array $arr
      * @return boolean
      */
-    static function isNumeric(array $arr)
+    public static function isNumeric(array $arr)
     {
         return (
             $arr === array() || range(0, count($arr) - 1) === array_keys($arr)
