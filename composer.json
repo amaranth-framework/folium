@@ -11,8 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": "^7.1",
-        "friendsofphp/php-cs-fixer": "^2.14@dev"
+        "php": "^7.1"
     },
     "autoload": {
         "classmap": [
@@ -22,7 +21,7 @@
         }
     },
     "require-dev": {
-        "tightenco/tlint": "^2.1"
+        "friendsofphp/php-cs-fixer": "^2.14@dev"
     },
     "scripts": {
         "lint": "./vendor/bin/php-cs-fixer fix src"
