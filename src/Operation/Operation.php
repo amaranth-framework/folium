@@ -29,7 +29,7 @@ class Operation
      *
      * @param string $modelClass Class name used for model.
      */
-    public function __construct(string $modelClass)
+    public function __construct(string $modelClass = null)
     {
         $this->_modelClass = $modelClass;
     }

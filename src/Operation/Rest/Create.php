@@ -25,5 +25,4 @@ namespace Itmcdev\Folium\Operation\Rest;
  */
 interface Create extends \Itmcdev\Folium\Operation\Crud\Create
 {
-
 }

@@ -27,7 +27,7 @@ include Itmcdev\Folium\Http\JsonResponse;
  */
 class RestUtils
 {
-    static $operands = [
+    public static $operands = [
         '$eq' => '=',
         '$ge' => '>=',
         '$gt' => '>',

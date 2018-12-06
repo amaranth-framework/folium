@@ -21,9 +21,9 @@
         }
     },
     "require-dev": {
-        "tightenco/tlint": "^2.1"
+        "friendsofphp/php-cs-fixer": "^2.14@dev"
     },
     "scripts": {
-        "lint": " ./vendor/bin/tlint lint src"
+        "lint": "./vendor/bin/php-cs-fixer fix src"
     }
 }
