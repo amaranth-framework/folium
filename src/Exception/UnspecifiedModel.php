@@ -26,11 +26,11 @@ class UnspecifiedModel extends \Exception
      * @param any $controller
      * @param str $method
      */
-    public function __construct(any $controller, str $method)
+    public function __construct($controller, string $method)
     {
         parent::__construct(
             sprintf(
-                'Unspecified $_modelClass parameter under `%s::%s()` method.',
+                'Unspecified $modelClass parameter under `%s::%s()` method.',
                 get_class($controller),
                 $method
             )

@@ -52,6 +52,9 @@ trait Controller
     {
         $this->modelClass = $modelClass;
         foreach (self::operations() as $operation) {
+            if (!isset($this->$operation)) {
+                continue;
+            }
             $this->$operation->setModelClass($modelClass);
         }
         return $this;

@@ -28,8 +28,8 @@ class UnspecifiedModelKey extends \Exception
      */
     public function __construct(
         string $modelClass,
-        any $controller,
-        str $method
+        $controller,
+        string $method
     ) {
         parent::__construct(
             sprintf(
