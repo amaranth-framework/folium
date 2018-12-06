@@ -51,6 +51,9 @@ trait Controller
     public function setModelClass(string $modelClass)
     {
         $this->modelClass = $modelClass;
+        foreach (self::operations() as $operation) {
+            $this->$operation->setModelClass($modelClass);
+        }
         return $this;
     }
 }

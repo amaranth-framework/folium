@@ -58,7 +58,7 @@ trait Controller
         $this->read = $read;
         $this->update = $update;
         $this->delete = $delete;
-        $this->modelClass = $modelClass;
+        $this->setModelClass($modelClass);
     }
 
     /**

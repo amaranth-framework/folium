@@ -63,7 +63,7 @@ trait Controller
         $this->update = $update;
         $this->replace = $replace;
         $this->delete = $delete;
-        $this->modelClass = $modelClass;
+        $this->setModelClass($modelClass);
     }
 
     /**
