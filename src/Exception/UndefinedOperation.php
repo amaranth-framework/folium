@@ -23,8 +23,9 @@ namespace Itmcdev\Folium\Exception;
 class UndefinedOperation extends \Exception
 {
     /**
-     * @param any $controller
-     * @param str $method
+     * @param any $class
+     * @param string $method
+     * @param array $arguments
      */
     public function __construct($class, $method, $arguments)
     {

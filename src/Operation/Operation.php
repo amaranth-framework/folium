@@ -22,7 +22,7 @@ namespace Itmcdev\Folium\Operation;
  */
 class Operation
 {
-    private $_modelClass = null;
+    protected $modelClass = null;
 
     /**
      * Constructor
@@ -31,7 +31,7 @@ class Operation
      */
     public function __construct(string $modelClass = null)
     {
-        $this->_modelClass = $modelClass;
+        $this->modelClass = $modelClass;
     }
 
     /**

@@ -22,6 +22,9 @@ namespace Itmcdev\Folium\Util;
  */
 class CrudUtils
 {
+    /** @var string $_countProperty */
+    protected static $_countProperty = '__count';
+
     /**
      * Parse criteria array
      *
@@ -51,6 +54,13 @@ class CrudUtils
         }
     }
 
+    /**
+     * Filter validation rules by a set of keys.
+     *
+     * @param array $rules
+     * @param array $keys
+     * @return array
+     */
     public static function patchRules($rules, $keys)
     {
         return array_intersect_key(
@@ -69,5 +79,19 @@ class CrudUtils
             method_exists($modelClass, 'canSoftDelete') &&
             $modelClass::canSoftDelete()
         );
+    }
+
+    /**
+     * Obtain the name of the options property which will request count functionality out of the Read operation.
+     * 
+     * @param string $name
+     * @return string
+     */
+    public static function countProperty(string $name = null)
+    {
+        if (!empty($name)) {
+            self::$_countProperty = $name;
+        }
+        return self::$_countProperty;
     }
 }
