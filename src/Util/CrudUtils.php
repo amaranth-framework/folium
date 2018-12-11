@@ -26,35 +26,6 @@ class CrudUtils
     protected static $_countProperty = '__count';
 
     /**
-     * Parse criteria array
-     *
-     * @param array $item
-     * @return array(string, array)
-     */
-    public static function parseCriteriaItem($item)
-    {
-        // by default, use where*
-        $where = 'where';
-        $whereIn = 'whereIn';
-
-        $or = array_values(array_slice($item, -1))[0];
-        // if or found, use orWhere*
-        if (is_string($or) && strtolower($or) === 'or') {
-            $where = 'orWhere';
-            $whereIn = 'orWhereIn';
-            $item = array_slice($item, 0, -1);
-        }
-
-        $value = array_values(array_slice($item, -1))[0];
-        // if value added to condition use where*
-        if (!is_array($value)) {
-            return [$where, $item];
-        } else {
-            return [$whereIn, $item];
-        }
-    }
-
-    /**
      * Filter validation rules by a set of keys.
      *
      * @param array $rules
