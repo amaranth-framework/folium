@@ -25,20 +25,9 @@ class CrudUtils
     /** @var string $_countProperty */
     protected static $_countProperty = '__count';
 
-    /**
-     * Filter validation rules by a set of keys.
-     *
-     * @param array $rules
-     * @param array $keys
-     * @return array
-     */
-    public static function patchRules($rules, $keys)
-    {
-        return array_intersect_key(
-            $rules,
-            array_flip(array_intersect(array_keys($rules), $keys))
-        );
-    }
+    protected static $_deletedProperty = 'deleted';
+
+    protected static $_permanentDeleteProperty = 'permanent';
 
     /**
      * @param string $model
@@ -64,5 +53,33 @@ class CrudUtils
             self::$_countProperty = $name;
         }
         return self::$_countProperty;
+    }
+
+    /**
+     * Obtain the name of the options property which will request deleted functionality out of the Read operation.
+     *
+     * @param string $name
+     * @return string
+     */
+    public static function deletedProperty(string $name = null)
+    {
+        if (!empty($name)) {
+            self::$_deletedProperty = $name;
+        }
+        return self::$_deletedProperty;
+    }
+
+    /**
+     * Obtain the name of the options property which will request permanentDelete functionality out of the Read operation.
+     *
+     * @param string $name
+     * @return string
+     */
+    public static function permanentDeleteProperty(string $name = null)
+    {
+        if (!empty($name)) {
+            self::$_permanentDeleteProperty = $name;
+        }
+        return self::$_permanentDeleteProperty;
     }
 }
