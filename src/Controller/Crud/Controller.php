@@ -17,7 +17,6 @@
 
 namespace Itmcdev\Folium\Controller\Crud;
 
-use Itmcdev\Folium\Controller\Controller as DefaultController;
 use Itmcdev\Folium\Operation\Crud\Create;
 use Itmcdev\Folium\Operation\Crud\Read;
 use Itmcdev\Folium\Operation\Crud\Update;
@@ -26,91 +25,15 @@ use Itmcdev\Folium\Operation\Crud\Delete;
 /**
  * CRUD Controller trait.
  * 
- * @method Controller setCreate()
- * @method Controller setRead()
- * @method Controller setUpdate()
- * @method Controller setDelete()
+ * @method Controller setCreate(Create $create)
+ * @method Controller setRead(Read $read)
+ * @method Controller setUpdate(Update $update)
+ * @method Controller setDelete(Delete $delete)
  */
 trait Controller
 {
-    /**
-     * Default Controller trait
-     */
-    use DefaultController;
-
-    protected static function operations()
+    final public function operations()
     {
         return ['create', 'read', 'update', 'delete'];
     }
-
-    /**
-     * CRUD Controller Constructor
-     *
-     * @param Create $create
-     * @param Read $read
-     * @param Update $update
-     * @param Delete $delete
-     * @param string $modelClass
-     */
-    public function __construct(
-        Create $create,
-        Read $read,
-        Update $update,
-        Delete $delete,
-        string $modelClass
-    ) {
-        $this->setCreate($create)
-            ->setRead($read)
-            ->setUpdate($update)
-            ->setDelete($delete)
-            ->setModelClass($modelClass);
-    }
-
-    // /**
-    //  * Set CRUD Create method
-    //  *
-    //  * @param Create $create
-    //  * @return self
-    //  */
-    // public function setCreate(Create $create)
-    // {
-    //     $this->create = $create;
-    //     return $this;
-    // }
-
-    // /**
-    //  * Set CRUD Read method
-    //  *
-    //  * @param Create $create
-    //  * @return self
-    //  */
-    // public function setRead(Read $read)
-    // {
-    //     $this->read = $read;
-    //     return $this;
-    // }
-
-    // /**
-    //  * Set CRUD Update method
-    //  *
-    //  * @param Create $create
-    //  * @return self
-    //  */
-    // public function setUpdate(Update $update)
-    // {
-    //     $this->update = $update;
-    //     return $this;
-    // }
-
-    // /**
-    //  * Set CRUD Delete method
-    //  *
-    //  * @param Create $create
-    //  * @return self
-    //  */
-    // public function setDelete(Delete $delete)
-    // {
-    //     $this->delete = $delete;
-    //     return $this;
-    // }
 }

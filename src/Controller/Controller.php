@@ -17,10 +17,15 @@
 
 namespace Itmcdev\Folium\Controller;
 
-use Itmcdev\Folium\Operation\Exception\UndefinedOperation;
+use Itmcdev\Folium\Exception\UndefinedOperation;
 
-trait Controller
+abstract class Controller
 {
+    public function operations()
+    {
+        return [];
+    }
+
     /**
      * Magic function for calling methods
      *
@@ -32,16 +37,16 @@ trait Controller
      */
     public function __call(string $method, array $arguments)
     {
-        if (array_search($method, self::operations()) !== false) {
+        if (array_search($method, $this->operations()) !== false) {
             return call_user_func_array(
                 array($this->$method, $method),
                 $arguments
             );
         }
-
+                
         if (strpos($method, 'set') !== false) {
             $operation = strtolower(substr($method, 3));
-            if (array_search($operation, self::operations()) !== false) {
+            if (array_search($operation, $this->operations()) !== false) {
                 $this->$operation = $arguments[0];
                 return $this;
             }
