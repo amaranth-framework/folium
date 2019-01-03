@@ -25,6 +25,11 @@ use Itmcdev\Folium\Operation\Crud\Delete;
 
 /**
  * CRUD Controller trait.
+ * 
+ * @method Controller setCreate()
+ * @method Controller setRead()
+ * @method Controller setUpdate()
+ * @method Controller setDelete()
  */
 trait Controller
 {
@@ -54,58 +59,58 @@ trait Controller
         Delete $delete,
         string $modelClass
     ) {
-        $this->create = $create;
-        $this->read = $read;
-        $this->update = $update;
-        $this->delete = $delete;
-        $this->setModelClass($modelClass);
+        $this->setCreate($create)
+            ->setRead($read)
+            ->setUpdate($update)
+            ->setDelete($delete)
+            ->setModelClass($modelClass);
     }
 
-    /**
-     * Set CRUD Create method
-     *
-     * @param Create $create
-     * @return self
-     */
-    public function setCreate(Create $create)
-    {
-        $this->create = $create;
-        return $this;
-    }
+    // /**
+    //  * Set CRUD Create method
+    //  *
+    //  * @param Create $create
+    //  * @return self
+    //  */
+    // public function setCreate(Create $create)
+    // {
+    //     $this->create = $create;
+    //     return $this;
+    // }
 
-    /**
-     * Set CRUD Read method
-     *
-     * @param Create $create
-     * @return self
-     */
-    public function setRead(Read $read)
-    {
-        $this->read = $read;
-        return $this;
-    }
+    // /**
+    //  * Set CRUD Read method
+    //  *
+    //  * @param Create $create
+    //  * @return self
+    //  */
+    // public function setRead(Read $read)
+    // {
+    //     $this->read = $read;
+    //     return $this;
+    // }
 
-    /**
-     * Set CRUD Update method
-     *
-     * @param Create $create
-     * @return self
-     */
-    public function setUpdate(Update $update)
-    {
-        $this->update = $update;
-        return $this;
-    }
+    // /**
+    //  * Set CRUD Update method
+    //  *
+    //  * @param Create $create
+    //  * @return self
+    //  */
+    // public function setUpdate(Update $update)
+    // {
+    //     $this->update = $update;
+    //     return $this;
+    // }
 
-    /**
-     * Set CRUD Delete method
-     *
-     * @param Create $create
-     * @return self
-     */
-    public function setDelete(Delete $delete)
-    {
-        $this->delete = $delete;
-        return $this;
-    }
+    // /**
+    //  * Set CRUD Delete method
+    //  *
+    //  * @param Create $create
+    //  * @return self
+    //  */
+    // public function setDelete(Delete $delete)
+    // {
+    //     $this->delete = $delete;
+    //     return $this;
+    // }
 }

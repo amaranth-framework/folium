@@ -39,6 +39,14 @@ trait Controller
             );
         }
 
+        if (strpos($method, 'set') !== false) {
+            $operation = strtolower(substr($method, 3));
+            if (array_search($operation, self::operations()) !== false) {
+                $this->$operation = $arguments[0];
+                return $this;
+            }
+        }
+
         throw new UndefinedOperation($this, $method, $arguments);
     }
 
