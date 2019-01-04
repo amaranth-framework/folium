@@ -30,9 +30,14 @@ use Itmcdev\Folium\Operation\Crud\Delete;
  * @method Controller setUpdate(Update $update)
  * @method Controller setDelete(Delete $delete)
  */
-trait Controller
+class Controller extends \Itmcdev\Folium\Controller\Controller
 {
-    final public function operations()
+    /**
+     * Undocumented function
+     *
+     * @return array
+     */
+    final protected function operations()
     {
         return ['create', 'read', 'update', 'delete'];
     }

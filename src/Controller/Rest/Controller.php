@@ -20,9 +20,14 @@ namespace Itmcdev\Folium\Controller\Rest;
 /**
  * REST Controller trait.
  */
-trait Controller
+class Controller extends \Itmcdev\Folium\Controller\Controller
 {
-    final public function operations()
+    /**
+     * Undocumented function
+     *
+     * @return array
+     */
+    final protected function operations()
     {
         return ['create', 'fetch', 'retreive', 'update', 'replace', 'delete'];
     }

@@ -21,7 +21,20 @@ use Itmcdev\Folium\Exception\UndefinedOperation;
 
 abstract class Controller
 {
-    public function operations()
+
+    /**
+     * Undocumented variable
+     *
+     * @var string
+     */
+    protected $modelClass;
+
+    /**
+     * Undocumented function
+     *
+     * @return array
+     */
+    protected function operations()
     {
         return [];
     }
@@ -64,12 +77,22 @@ abstract class Controller
     public function setModelClass(string $modelClass)
     {
         $this->modelClass = $modelClass;
-        foreach (self::operations() as $operation) {
+        foreach ($this->operations() as $operation) {
             if (!isset($this->$operation)) {
                 continue;
             }
             $this->$operation->setModelClass($modelClass);
         }
         return $this;
+    }
+
+    /**
+     * Undocumented function
+     *
+     * @return string
+     */
+    public function getModelClass()
+    {
+        return $this->modelClass;
     }
 }

@@ -45,4 +45,9 @@ class Operation
         $this->modelClass = $modelClass;
         return $this;
     }
+
+    public function getModelClass()
+    {
+        return $this->modelClass;
+    }
 }
