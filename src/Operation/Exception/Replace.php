@@ -18,15 +18,15 @@
 namespace Itmcdev\Folium\Operation\Exception;
 
 /**
- * Exception used for cases data fails updating.
+ * Exception used for cases data fails replacing.
  */
-class Update extends \Exception
+class Replace extends \Exception
 {   
     /**
      * Constructor
      */
     public function __construct()
     {
-        parent::__construct('Failed updating data.');
+        parent::__construct('Failed replacing data.');
     }
 }

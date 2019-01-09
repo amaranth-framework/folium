@@ -46,7 +46,7 @@ interface Fetch
      * @param array      $options  Fields to obtain.
      * @return array|int           Array of items matching the criteria and having only the fields required or their count.
      */
-    public function list(
+    public function fetch(
         array $criteria = [],
         array $fields = [],
         array $options = []

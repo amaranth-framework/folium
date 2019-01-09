@@ -15,9 +15,7 @@
  * limitations under the License.
  */
 
-namespace Itmcdev\Folium\Util\Rest;
-
-include Itmcdev\Folium\Http\JsonResponse;
+namespace Itmcdev\Folium\Util;
 
 /**
  * NOTE: The bellow comment conviced me to not use HTTP statuses along with REST errors, and create my own set of
@@ -25,143 +23,143 @@ include Itmcdev\Folium\Http\JsonResponse;
  *
  * @link https://stackoverflow.com/a/46379701/665019
  */
-class RestUtils
+class RestUtils extends CrudUtils
 {
-    public static $operands = [
-        '$eq' => '=',
-        '$ge' => '>=',
-        '$gt' => '>',
-        '$in' => null,
-        '$ne' => '<>',
-        '$le' => '<=',
-        '$like' => 'LIKE',
-        '$lt' => '<'
-    ];
+    // public static $operands = [
+    //     '$eq' => '=',
+    //     '$ge' => '>=',
+    //     '$gt' => '>',
+    //     '$in' => null,
+    //     '$ne' => '<>',
+    //     '$le' => '<=',
+    //     '$like' => 'LIKE',
+    //     '$lt' => '<'
+    // ];
 
-    const STATUS_SUCCESS = 'success';
-    const STATUS_ERROR = 'error';
+    // const STATUS_SUCCESS = 'success';
+    // const STATUS_ERROR = 'error';
 
-    const CODE_DUPLICATE_REQUEST = 'DUPLICATE_REQUEST';
-    const CODE_GENERIC_ERROR = 'GENERIC_ERROR';
-    const CODE_INVALID_REQUEST_TYPE = 'INVALID_REQUEST_TYPE';
-    const CODE_INVALID_MODEL_INSTANCE = 'INVALID_MODEL_INSTANCE';
-    const CODE_OK = 'OK';
-    const CODE_VALIDATION_ERROR = 'VALIDATION_ERROR';
-    const CODE_UNKNOWN_ERROR = 'UNKNOWN_ERROR';
+    // const CODE_DUPLICATE_REQUEST = 'DUPLICATE_REQUEST';
+    // const CODE_GENERIC_ERROR = 'GENERIC_ERROR';
+    // const CODE_INVALID_REQUEST_TYPE = 'INVALID_REQUEST_TYPE';
+    // const CODE_INVALID_MODEL_INSTANCE = 'INVALID_MODEL_INSTANCE';
+    // const CODE_OK = 'OK';
+    // const CODE_VALIDATION_ERROR = 'VALIDATION_ERROR';
+    // const CODE_UNKNOWN_ERROR = 'UNKNOWN_ERROR';
 
-    const HTTP_OK = 200;
+    // const HTTP_OK = 200;
 
-    /**
-     * Example of Request to criteria array method.
-     * NOTE: This method will function with most SQL based languages. Please addapt it for other query languages you use
-     * based on their syntax.
-     *
-     * @param Request $request
-     * @return array
-     */
-    public static function requestToCriteria(Request $request)
-    {
-        $params = $request->query->all();
-        if (!empty($params['__count'])) {
-            delete($params['__count']);
-        }
+    // /**
+    //  * Example of Request to criteria array method.
+    //  * NOTE: This method will function with most SQL based languages. Please addapt it for other query languages you use
+    //  * based on their syntax.
+    //  *
+    //  * @param Request $request
+    //  * @return array
+    //  */
+    // public static function requestToCriteria(Request $request)
+    // {
+    //     $params = $request->query->all();
+    //     if (!empty($params['__count'])) {
+    //         delete($params['__count']);
+    //     }
 
-        $params = array_map(null, array_keys($params), array_values($params));
+    //     $params = array_map(null, array_keys($params), array_values($params));
 
-        return array_map(function ($set) {
-            list($field, $value) = $set;
+    //     return array_map(function ($set) {
+    //         list($field, $value) = $set;
 
-            if (preg_match('/([^\[]+)\[([^\]]+)\]/i', $field, $matches)) {
-                $field = $matches[1];
-                $operand = strtolower($matches[2]);
-                if ($operand !== '$in') {
-                    return [$field, self::$operands[$operand], $value];
-                }
-                return [$operand, json_decode($value)];
-            }
-            return $set;
-        }, $params);
-    }
+    //         if (preg_match('/([^\[]+)\[([^\]]+)\]/i', $field, $matches)) {
+    //             $field = $matches[1];
+    //             $operand = strtolower($matches[2]);
+    //             if ($operand !== '$in') {
+    //                 return [$field, self::$operands[$operand], $value];
+    //             }
+    //             return [$operand, json_decode($value)];
+    //         }
+    //         return $set;
+    //     }, $params);
+    // }
 
-    /**
-     * Undocumented function
-     *
-     * @param any $data
-     * @return JsonResponse
-     */
-    public static function respondWithSuccess($data)
-    {
-        return new JsonResponse(
-            [
-                'data' => $data,
-                'status' => self::STATUS_SUCCESS,
-                'code' => self::CODE_OK
-            ],
-            self::HTTP_OK
-        );
-    }
+    // /**
+    //  * Undocumented function
+    //  *
+    //  * @param any $data
+    //  * @return JsonResponse
+    //  */
+    // public static function respondWithSuccess($data)
+    // {
+    //     return new JsonResponse(
+    //         [
+    //             'data' => $data,
+    //             'status' => self::STATUS_SUCCESS,
+    //             'code' => self::CODE_OK
+    //         ],
+    //         self::HTTP_OK
+    //     );
+    // }
 
-    /**
-     * Undocumented function
-     *
-     * @param string $error
-     * @param int    $status
-     * @return JsonResponse
-     */
-    // static function respondWithError($error, $status = self::HTTP_BAD_REQUEST)
-    public static function respondWithError(
-        $error,
-        $code = self::CODE_GENERIC_ERROR,
-        $status = self::HTTP_OK
-    ) {
-        return new JsonResponse(
-            [
-                'message' => $error,
-                'status' => self::STATUS_ERROR,
-                'code' => $code
-            ],
-            $status
-        );
-    }
+    // /**
+    //  * Undocumented function
+    //  *
+    //  * @param string $error
+    //  * @param int    $status
+    //  * @return JsonResponse
+    //  */
+    // // static function respondWithError($error, $status = self::HTTP_BAD_REQUEST)
+    // public static function respondWithError(
+    //     $error,
+    //     $code = self::CODE_GENERIC_ERROR,
+    //     $status = self::HTTP_OK
+    // ) {
+    //     return new JsonResponse(
+    //         [
+    //             'message' => $error,
+    //             'status' => self::STATUS_ERROR,
+    //             'code' => $code
+    //         ],
+    //         $status
+    //     );
+    // }
 
-    public static function respondWithInvalidMethod()
-    {
-        // return self::respondWithError('Invalid Request Method.', self::HTTP_METHOD_NOT_ALLOWED);
-        return self::respondWithError(
-            'Invalid Request Method.',
-            self::CODE_INVALID_REQUEST_TYPE
-        );
-    }
+    // public static function respondWithInvalidMethod()
+    // {
+    //     // return self::respondWithError('Invalid Request Method.', self::HTTP_METHOD_NOT_ALLOWED);
+    //     return self::respondWithError(
+    //         'Invalid Request Method.',
+    //         self::CODE_INVALID_REQUEST_TYPE
+    //     );
+    // }
 
-    public static function respondWithUnspecifiedModel()
-    {
-        // return self::respondWithError('Invalid Model Instance.', self::HTTP_CONFLICT);
-        return self::respondWithError(
-            'Invalid Model Instance.',
-            self::CODE_INVALID_MODEL_INSTANCE
-        );
-    }
+    // public static function respondWithUnspecifiedModel()
+    // {
+    //     // return self::respondWithError('Invalid Model Instance.', self::HTTP_CONFLICT);
+    //     return self::respondWithError(
+    //         'Invalid Model Instance.',
+    //         self::CODE_INVALID_MODEL_INSTANCE
+    //     );
+    // }
 
-    public static function respondWithValidationError($message)
-    {
-        // return self::respondWithError($message, self::HTTP_BAD_REQUEST);
-        return self::respondWithError($message, self::CODE_VALIDATION_ERROR);
-    }
+    // public static function respondWithValidationError($message)
+    // {
+    //     // return self::respondWithError($message, self::HTTP_BAD_REQUEST);
+    //     return self::respondWithError($message, self::CODE_VALIDATION_ERROR);
+    // }
 
-    /**
-     * Should respond for double POST/PUT
-     */
-    public static function respondWithDuplicateRequest($message)
-    {
-        // return self::respondWithError($message, self::HTTP_CONFLICT);
-        return self::respondWithError($message, self::CODE_DUPLICATE_REQUEST);
-    }
+    // /**
+    //  * Should respond for double POST/PUT
+    //  */
+    // public static function respondWithDuplicateRequest($message)
+    // {
+    //     // return self::respondWithError($message, self::HTTP_CONFLICT);
+    //     return self::respondWithError($message, self::CODE_DUPLICATE_REQUEST);
+    // }
 
-    public static function respondWithUnknownError()
-    {
-        return self::respondWithError(
-            'Uncaught error.',
-            self::CODE_UNKNOWN_ERROR
-        );
-    }
+    // public static function respondWithUnknownError()
+    // {
+    //     return self::respondWithError(
+    //         'Uncaught error.',
+    //         self::CODE_UNKNOWN_ERROR
+    //     );
+    // }
 }
