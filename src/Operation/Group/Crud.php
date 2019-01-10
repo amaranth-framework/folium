@@ -15,12 +15,22 @@
  * limitations under the License.
  */
 
-namespace Itmcdev\Folium\Controller\Rest;
+namespace Itmcdev\Folium\Operation\Group;
+
+use Itmcdev\Folium\Operation\Crud\Create;
+use Itmcdev\Folium\Operation\Crud\Read;
+use Itmcdev\Folium\Operation\Crud\Update;
+use Itmcdev\Folium\Operation\Crud\Delete;
 
 /**
- * REST Controller trait.
+ * CRUD Operation Group.
+ * 
+ * @method Controller setCreate(Create $create)
+ * @method Controller setRead(Read $read)
+ * @method Controller setUpdate(Update $update)
+ * @method Controller setDelete(Delete $delete)
  */
-class Controller extends \Itmcdev\Folium\Controller\Controller
+class Crud extends \Itmcdev\Folium\Operation\Group
 {
     /**
      * Undocumented function
@@ -29,6 +39,6 @@ class Controller extends \Itmcdev\Folium\Controller\Controller
      */
     final protected function operations()
     {
-        return ['create', 'fetch', 'retreive', 'update', 'replace', 'delete'];
+        return ['create', 'read', 'update', 'delete'];
     }
 }
