@@ -4,8 +4,170 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e2c86220733079acfa1587ee4d49812e",
+    "content-hash": "7be7310c41dca48712934e24ebaee24c",
     "packages": [
+        {
+            "name": "guzzlehttp/psr7",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/psr7.git",
+                "reference": "ae7949ee7b865f0eb8b191c438cda63cad59d437"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/ae7949ee7b865f0eb8b191c438cda63cad59d437",
+                "reference": "ae7949ee7b865f0eb8b191c438cda63cad59d437",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "psr/http-message": "~1.0",
+                "ralouphie/getallheaders": "^2.0.5 || ^3.0.0"
+            },
+            "provide": {
+                "psr/http-message-implementation": "1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
+            },
+            "suggest": {
+                "zendframework/zend-httphandlerrunner": "Emit PSR-7 responses"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                },
+                "files": [
+                    "src/functions_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Tobias Schultze",
+                    "homepage": "https://github.com/Tobion"
+                }
+            ],
+            "description": "PSR-7 message implementation that also provides common utility methods",
+            "keywords": [
+                "http",
+                "message",
+                "psr-7",
+                "request",
+                "response",
+                "stream",
+                "uri",
+                "url"
+            ],
+            "time": "2018-12-28T01:59:01+00:00"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2016-08-06T14:39:51+00:00"
+        },
+        {
+            "name": "ralouphie/getallheaders",
+            "version": "3.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ralouphie/getallheaders.git",
+                "reference": "beb49b96960f0cbf17e7fbcaaddc8eb434e126eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/beb49b96960f0cbf17e7fbcaaddc8eb434e126eb",
+                "reference": "beb49b96960f0cbf17e7fbcaaddc8eb434e126eb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5",
+                "satooshi/php-coveralls": ">=1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/getallheaders.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ralph Khattar",
+                    "email": "ralph.khattar@gmail.com"
+                }
+            ],
+            "description": "A polyfill for getallheaders.",
+            "time": "2018-12-11T21:53:24+00:00"
+        }
+    ],
+    "packages-dev": [
         {
             "name": "composer/semver",
             "version": "dev-master",
@@ -181,988 +343,6 @@
             "time": "2018-05-06T10:14:50+00:00"
         },
         {
-            "name": "doctrine/lexer",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/lexer.git",
-                "reference": "4ab6ea7c838ccb340883fd78915af079949cc64d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/4ab6ea7c838ccb340883fd78915af079949cc64d",
-                "reference": "4ab6ea7c838ccb340883fd78915af079949cc64d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.5"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Common\\Lexer\\": "lib/Doctrine/Common/Lexer"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "PHP Doctrine Lexer parser library that can be used in Top-Down, Recursive Descent Parsers.",
-            "homepage": "https://www.doctrine-project.org/projects/lexer.html",
-            "keywords": [
-                "annotations",
-                "docblock",
-                "lexer",
-                "parser",
-                "php"
-            ],
-            "time": "2018-10-21T19:22:05+00:00"
-        },
-        {
-            "name": "friendsofphp/php-cs-fixer",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "b352faf6870c1cdf773e518a42881c1bdfc10e86"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/b352faf6870c1cdf773e518a42881c1bdfc10e86",
-                "reference": "b352faf6870c1cdf773e518a42881c1bdfc10e86",
-                "shasum": ""
-            },
-            "require": {
-                "composer/semver": "^1.4",
-                "composer/xdebug-handler": "^1.2",
-                "doctrine/annotations": "^1.2",
-                "ext-json": "*",
-                "ext-tokenizer": "*",
-                "php": "^5.6 || >=7.0 <7.3",
-                "php-cs-fixer/diff": "^1.3",
-                "symfony/console": "^3.4.17 || ^4.1.6",
-                "symfony/event-dispatcher": "^3.0 || ^4.0",
-                "symfony/filesystem": "^3.0 || ^4.0",
-                "symfony/finder": "^3.0 || ^4.0",
-                "symfony/options-resolver": "^3.0 || ^4.0",
-                "symfony/polyfill-php70": "^1.0",
-                "symfony/polyfill-php72": "^1.4",
-                "symfony/process": "^3.0 || ^4.0",
-                "symfony/stopwatch": "^3.0 || ^4.0"
-            },
-            "conflict": {
-                "hhvm": "*"
-            },
-            "require-dev": {
-                "johnkary/phpunit-speedtrap": "^1.1 || ^2.0 || ^3.0",
-                "justinrainbow/json-schema": "^5.0",
-                "keradus/cli-executor": "^1.1",
-                "mikey179/vfsstream": "^1.6",
-                "php-coveralls/php-coveralls": "^2.1",
-                "php-cs-fixer/accessible-object": "^1.0",
-                "php-cs-fixer/phpunit-constraint-isidenticalstring": "^1.0.1",
-                "php-cs-fixer/phpunit-constraint-xmlmatchesxsd": "^1.0.1",
-                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1",
-                "phpunitgoodpractices/traits": "^1.5.1",
-                "symfony/phpunit-bridge": "^4.0"
-            },
-            "suggest": {
-                "ext-mbstring": "For handling non-UTF8 characters in cache signature.",
-                "php-cs-fixer/phpunit-constraint-isidenticalstring": "For IsIdenticalString constraint.",
-                "php-cs-fixer/phpunit-constraint-xmlmatchesxsd": "For XmlMatchesXsd constraint.",
-                "symfony/polyfill-mbstring": "When enabling `ext-mbstring` is not possible."
-            },
-            "bin": [
-                "php-cs-fixer"
-            ],
-            "type": "application",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.14-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "PhpCsFixer\\": "src/"
-                },
-                "classmap": [
-                    "tests/Test/AbstractFixerTestCase.php",
-                    "tests/Test/AbstractIntegrationCaseFactory.php",
-                    "tests/Test/AbstractIntegrationTestCase.php",
-                    "tests/Test/Assert/AssertTokensTrait.php",
-                    "tests/Test/IntegrationCase.php",
-                    "tests/Test/IntegrationCaseFactory.php",
-                    "tests/Test/IntegrationCaseFactoryInterface.php",
-                    "tests/Test/InternalIntegrationCaseFactory.php",
-                    "tests/TestCase.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dariusz Rumiński",
-                    "email": "dariusz.ruminski@gmail.com"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "A tool to automatically fix PHP code style",
-            "time": "2018-12-03T16:34:14+00:00"
-        },
-        {
-            "name": "paragonie/random_compat",
-            "version": "v9.99.99.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "0947f25b883d4172df340a0d95f1b7cdabc5368a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/0947f25b883d4172df340a0d95f1b7cdabc5368a",
-                "reference": "0947f25b883d4172df340a0d95f1b7cdabc5368a",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*|5.*",
-                "vimeo/psalm": "^1"
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Paragon Initiative Enterprises",
-                    "email": "security@paragonie.com",
-                    "homepage": "https://paragonie.com"
-                }
-            ],
-            "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
-            "keywords": [
-                "csprng",
-                "polyfill",
-                "pseudorandom",
-                "random"
-            ],
-            "time": "2018-08-07T13:07:48+00:00"
-        },
-        {
-            "name": "php-cs-fixer/diff",
-            "version": "v1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/PHP-CS-Fixer/diff.git",
-                "reference": "78bb099e9c16361126c86ce82ec4405ebab8e756"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/diff/zipball/78bb099e9c16361126c86ce82ec4405ebab8e756",
-                "reference": "78bb099e9c16361126c86ce82ec4405ebab8e756",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.6 || ^7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.7.23 || ^6.4.3",
-                "symfony/process": "^3.3"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Kore Nordmann",
-                    "email": "mail@kore-nordmann.de"
-                },
-                {
-                    "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de"
-                },
-                {
-                    "name": "SpacePossum"
-                }
-            ],
-            "description": "sebastian/diff v2 backport support for PHP5.6",
-            "homepage": "https://github.com/PHP-CS-Fixer",
-            "keywords": [
-                "diff"
-            ],
-            "time": "2018-02-15T16:58:55+00:00"
-        },
-        {
-            "name": "psr/log",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/log.git",
-                "reference": "c4421fcac1edd5a324fda73e589a5cf96e52ffd0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/c4421fcac1edd5a324fda73e589a5cf96e52ffd0",
-                "reference": "c4421fcac1edd5a324fda73e589a5cf96e52ffd0",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\Log\\": "Psr/Log/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interface for logging libraries",
-            "homepage": "https://github.com/php-fig/log",
-            "keywords": [
-                "log",
-                "psr",
-                "psr-3"
-            ],
-            "time": "2018-11-21T13:42:00+00:00"
-        },
-        {
-            "name": "symfony/console",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/console.git",
-                "reference": "f0ccd811fe34dd4d01502614e7361b93594994c3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/f0ccd811fe34dd4d01502614e7361b93594994c3",
-                "reference": "f0ccd811fe34dd4d01502614e7361b93594994c3",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3",
-                "symfony/contracts": "^1.0",
-                "symfony/polyfill-mbstring": "~1.0"
-            },
-            "conflict": {
-                "symfony/dependency-injection": "<3.4",
-                "symfony/process": "<3.3"
-            },
-            "require-dev": {
-                "psr/log": "~1.0",
-                "symfony/config": "~3.4|~4.0",
-                "symfony/dependency-injection": "~3.4|~4.0",
-                "symfony/event-dispatcher": "~3.4|~4.0",
-                "symfony/lock": "~3.4|~4.0",
-                "symfony/process": "~3.4|~4.0"
-            },
-            "suggest": {
-                "psr/log-implementation": "For using the console logger",
-                "symfony/event-dispatcher": "",
-                "symfony/lock": "",
-                "symfony/process": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Console\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Console Component",
-            "homepage": "https://symfony.com",
-            "time": "2018-11-27T07:40:59+00:00"
-        },
-        {
-            "name": "symfony/contracts",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/contracts.git",
-                "reference": "3edf0ab943d1985a356721952cba36ff31bd6e5f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/contracts/zipball/3edf0ab943d1985a356721952cba36ff31bd6e5f",
-                "reference": "3edf0ab943d1985a356721952cba36ff31bd6e5f",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3"
-            },
-            "require-dev": {
-                "psr/cache": "^1.0",
-                "psr/container": "^1.0"
-            },
-            "suggest": {
-                "psr/cache": "When using the Cache contracts",
-                "psr/container": "When using the Service contracts",
-                "symfony/cache-contracts-implementation": "",
-                "symfony/service-contracts-implementation": "",
-                "symfony/translation-contracts-implementation": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Contracts\\": ""
-                },
-                "exclude-from-classmap": [
-                    "**/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "A set of abstractions extracted out of the Symfony components",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "abstractions",
-                "contracts",
-                "decoupling",
-                "interfaces",
-                "interoperability",
-                "standards"
-            ],
-            "time": "2018-11-24T09:35:08+00:00"
-        },
-        {
-            "name": "symfony/event-dispatcher",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "4dd5aac827109343640d66104999765faf8d0c34"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/4dd5aac827109343640d66104999765faf8d0c34",
-                "reference": "4dd5aac827109343640d66104999765faf8d0c34",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3",
-                "symfony/contracts": "^1.0"
-            },
-            "conflict": {
-                "symfony/dependency-injection": "<3.4"
-            },
-            "require-dev": {
-                "psr/log": "~1.0",
-                "symfony/config": "~3.4|~4.0",
-                "symfony/dependency-injection": "~3.4|~4.0",
-                "symfony/expression-language": "~3.4|~4.0",
-                "symfony/stopwatch": "~3.4|~4.0"
-            },
-            "suggest": {
-                "symfony/dependency-injection": "",
-                "symfony/http-kernel": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\EventDispatcher\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony EventDispatcher Component",
-            "homepage": "https://symfony.com",
-            "time": "2018-12-01T08:53:37+00:00"
-        },
-        {
-            "name": "symfony/filesystem",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/filesystem.git",
-                "reference": "c754e7d6b709768a7fa873d536b2475105caf701"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/c754e7d6b709768a7fa873d536b2475105caf701",
-                "reference": "c754e7d6b709768a7fa873d536b2475105caf701",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3",
-                "symfony/polyfill-ctype": "~1.8"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Filesystem\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Filesystem Component",
-            "homepage": "https://symfony.com",
-            "time": "2018-11-26T16:19:01+00:00"
-        },
-        {
-            "name": "symfony/finder",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/finder.git",
-                "reference": "047be7e3450e5460f14c4a42a02c9811e2eda2cd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/047be7e3450e5460f14c4a42a02c9811e2eda2cd",
-                "reference": "047be7e3450e5460f14c4a42a02c9811e2eda2cd",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Finder\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Finder Component",
-            "homepage": "https://symfony.com",
-            "time": "2018-11-26T16:19:01+00:00"
-        },
-        {
-            "name": "symfony/options-resolver",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/options-resolver.git",
-                "reference": "00943d4b64e3ac3d655d69e200eb9e8e6f0f4b4b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/00943d4b64e3ac3d655d69e200eb9e8e6f0f4b4b",
-                "reference": "00943d4b64e3ac3d655d69e200eb9e8e6f0f4b4b",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\OptionsResolver\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony OptionsResolver Component",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "config",
-                "configuration",
-                "options"
-            ],
-            "time": "2018-11-26T16:19:01+00:00"
-        },
-        {
-            "name": "symfony/polyfill-ctype",
-            "version": "v1.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/e3d826245268269cd66f8326bd8bc066687b4a19",
-                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "suggest": {
-                "ext-ctype": "For best performance"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.9-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
-                "files": [
-                    "bootstrap.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                },
-                {
-                    "name": "Gert de Pagter",
-                    "email": "BackEndTea@gmail.com"
-                }
-            ],
-            "description": "Symfony polyfill for ctype functions",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "ctype",
-                "polyfill",
-                "portable"
-            ],
-            "time": "2018-08-06T14:22:27+00:00"
-        },
-        {
-            "name": "symfony/polyfill-mbstring",
-            "version": "v1.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/c79c051f5b3a46be09205c73b80b346e4153e494",
-                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "suggest": {
-                "ext-mbstring": "For best performance"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.9-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
-                "files": [
-                    "bootstrap.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill for the Mbstring extension",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "mbstring",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "time": "2018-09-21T13:07:52+00:00"
-        },
-        {
-            "name": "symfony/polyfill-php70",
-            "version": "v1.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php70.git",
-                "reference": "6b88000cdd431cd2e940caa2cb569201f3f84224"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/6b88000cdd431cd2e940caa2cb569201f3f84224",
-                "reference": "6b88000cdd431cd2e940caa2cb569201f3f84224",
-                "shasum": ""
-            },
-            "require": {
-                "paragonie/random_compat": "~1.0|~2.0|~9.99",
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.9-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php70\\": ""
-                },
-                "files": [
-                    "bootstrap.php"
-                ],
-                "classmap": [
-                    "Resources/stubs"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill backporting some PHP 7.0+ features to lower PHP versions",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "time": "2018-09-21T06:26:08+00:00"
-        },
-        {
-            "name": "symfony/polyfill-php72",
-            "version": "v1.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php72.git",
-                "reference": "9050816e2ca34a8e916c3a0ae8b9c2fccf68b631"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/9050816e2ca34a8e916c3a0ae8b9c2fccf68b631",
-                "reference": "9050816e2ca34a8e916c3a0ae8b9c2fccf68b631",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.9-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php72\\": ""
-                },
-                "files": [
-                    "bootstrap.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "time": "2018-09-21T13:07:52+00:00"
-        },
-        {
-            "name": "symfony/process",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/process.git",
-                "reference": "1a01d2984ed07841fe3db2da69743f9b2ee14de7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/1a01d2984ed07841fe3db2da69743f9b2ee14de7",
-                "reference": "1a01d2984ed07841fe3db2da69743f9b2ee14de7",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Process\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Process Component",
-            "homepage": "https://symfony.com",
-            "time": "2018-11-26T16:19:01+00:00"
-        },
-        {
-            "name": "symfony/stopwatch",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/stopwatch.git",
-                "reference": "e7a0abd89138ac26fc03b56aab1fa4c00a33c883"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/e7a0abd89138ac26fc03b56aab1fa4c00a33c883",
-                "reference": "e7a0abd89138ac26fc03b56aab1fa4c00a33c883",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1.3",
-                "symfony/contracts": "^1.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Stopwatch\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Stopwatch Component",
-            "homepage": "https://symfony.com",
-            "time": "2018-11-26T16:19:01+00:00"
-        }
-    ],
-    "packages-dev": [
-        {
             "name": "doctrine/inflector",
             "version": "1.3.x-dev",
             "source": {
@@ -1228,6 +408,157 @@
                 "string"
             ],
             "time": "2018-06-15T19:03:38+00:00"
+        },
+        {
+            "name": "doctrine/lexer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/lexer.git",
+                "reference": "4ab6ea7c838ccb340883fd78915af079949cc64d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/4ab6ea7c838ccb340883fd78915af079949cc64d",
+                "reference": "4ab6ea7c838ccb340883fd78915af079949cc64d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\Lexer\\": "lib/Doctrine/Common/Lexer"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "PHP Doctrine Lexer parser library that can be used in Top-Down, Recursive Descent Parsers.",
+            "homepage": "https://www.doctrine-project.org/projects/lexer.html",
+            "keywords": [
+                "annotations",
+                "docblock",
+                "lexer",
+                "parser",
+                "php"
+            ],
+            "time": "2018-10-21T19:22:05+00:00"
+        },
+        {
+            "name": "friendsofphp/php-cs-fixer",
+            "version": "2.14.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
+                "reference": "fc71b758c92bd0feb901a3c7c5c95fd3212cf42e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/fc71b758c92bd0feb901a3c7c5c95fd3212cf42e",
+                "reference": "fc71b758c92bd0feb901a3c7c5c95fd3212cf42e",
+                "shasum": ""
+            },
+            "require": {
+                "composer/semver": "^1.4",
+                "composer/xdebug-handler": "^1.2",
+                "doctrine/annotations": "^1.2",
+                "ext-json": "*",
+                "ext-tokenizer": "*",
+                "php": "^5.6 || ^7.0",
+                "php-cs-fixer/diff": "^1.3",
+                "symfony/console": "^3.4.17 || ^4.1.6",
+                "symfony/event-dispatcher": "^3.0 || ^4.0",
+                "symfony/filesystem": "^3.0 || ^4.0",
+                "symfony/finder": "^3.0 || ^4.0",
+                "symfony/options-resolver": "^3.0 || ^4.0",
+                "symfony/polyfill-php70": "^1.0",
+                "symfony/polyfill-php72": "^1.4",
+                "symfony/process": "^3.0 || ^4.0",
+                "symfony/stopwatch": "^3.0 || ^4.0"
+            },
+            "conflict": {
+                "hhvm": "*"
+            },
+            "require-dev": {
+                "johnkary/phpunit-speedtrap": "^1.1 || ^2.0 || ^3.0",
+                "justinrainbow/json-schema": "^5.0",
+                "keradus/cli-executor": "^1.2",
+                "mikey179/vfsstream": "^1.6",
+                "php-coveralls/php-coveralls": "^2.1",
+                "php-cs-fixer/accessible-object": "^1.0",
+                "php-cs-fixer/phpunit-constraint-isidenticalstring": "^1.0.1",
+                "php-cs-fixer/phpunit-constraint-xmlmatchesxsd": "^1.0.1",
+                "phpunit/phpunit": "^5.7.27 || ^6.5.8 || ^7.1",
+                "phpunitgoodpractices/traits": "^1.5.1",
+                "symfony/phpunit-bridge": "^4.0"
+            },
+            "suggest": {
+                "ext-mbstring": "For handling non-UTF8 characters in cache signature.",
+                "php-cs-fixer/phpunit-constraint-isidenticalstring": "For IsIdenticalString constraint.",
+                "php-cs-fixer/phpunit-constraint-xmlmatchesxsd": "For XmlMatchesXsd constraint.",
+                "symfony/polyfill-mbstring": "When enabling `ext-mbstring` is not possible."
+            },
+            "bin": [
+                "php-cs-fixer"
+            ],
+            "type": "application",
+            "autoload": {
+                "psr-4": {
+                    "PhpCsFixer\\": "src/"
+                },
+                "classmap": [
+                    "tests/Test/AbstractFixerTestCase.php",
+                    "tests/Test/AbstractIntegrationCaseFactory.php",
+                    "tests/Test/AbstractIntegrationTestCase.php",
+                    "tests/Test/Assert/AssertTokensTrait.php",
+                    "tests/Test/IntegrationCase.php",
+                    "tests/Test/IntegrationCaseFactory.php",
+                    "tests/Test/IntegrationCaseFactoryInterface.php",
+                    "tests/Test/InternalIntegrationCaseFactory.php",
+                    "tests/TestCase.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dariusz Rumiński",
+                    "email": "dariusz.ruminski@gmail.com"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "A tool to automatically fix PHP code style",
+            "time": "2019-01-11T16:22:43+00:00"
         },
         {
             "name": "illuminate/container",
@@ -1635,6 +966,99 @@
             "time": "2018-11-30T10:00:48+00:00"
         },
         {
+            "name": "paragonie/random_compat",
+            "version": "v9.99.99.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/paragonie/random_compat.git",
+                "reference": "0947f25b883d4172df340a0d95f1b7cdabc5368a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/0947f25b883d4172df340a0d95f1b7cdabc5368a",
+                "reference": "0947f25b883d4172df340a0d95f1b7cdabc5368a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*|5.*",
+                "vimeo/psalm": "^1"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paragon Initiative Enterprises",
+                    "email": "security@paragonie.com",
+                    "homepage": "https://paragonie.com"
+                }
+            ],
+            "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
+            "keywords": [
+                "csprng",
+                "polyfill",
+                "pseudorandom",
+                "random"
+            ],
+            "time": "2018-08-07T13:07:48+00:00"
+        },
+        {
+            "name": "php-cs-fixer/diff",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHP-CS-Fixer/diff.git",
+                "reference": "78bb099e9c16361126c86ce82ec4405ebab8e756"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/diff/zipball/78bb099e9c16361126c86ce82ec4405ebab8e756",
+                "reference": "78bb099e9c16361126c86ce82ec4405ebab8e756",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7.23 || ^6.4.3",
+                "symfony/process": "^3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Kore Nordmann",
+                    "email": "mail@kore-nordmann.de"
+                },
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                },
+                {
+                    "name": "SpacePossum"
+                }
+            ],
+            "description": "sebastian/diff v2 backport support for PHP5.6",
+            "homepage": "https://github.com/PHP-CS-Fixer",
+            "keywords": [
+                "diff"
+            ],
+            "time": "2018-02-15T16:58:55+00:00"
+        },
+        {
             "name": "psr/container",
             "version": "dev-master",
             "source": {
@@ -1684,6 +1108,53 @@
             "time": "2017-06-28T15:35:32+00:00"
         },
         {
+            "name": "psr/log",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "c4421fcac1edd5a324fda73e589a5cf96e52ffd0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/c4421fcac1edd5a324fda73e589a5cf96e52ffd0",
+                "reference": "c4421fcac1edd5a324fda73e589a5cf96e52ffd0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2018-11-21T13:42:00+00:00"
+        },
+        {
             "name": "psr/simple-cache",
             "version": "dev-master",
             "source": {
@@ -1730,6 +1201,143 @@
                 "simple-cache"
             ],
             "time": "2017-10-23T01:57:42+00:00"
+        },
+        {
+            "name": "symfony/console",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/console.git",
+                "reference": "f0ccd811fe34dd4d01502614e7361b93594994c3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/console/zipball/f0ccd811fe34dd4d01502614e7361b93594994c3",
+                "reference": "f0ccd811fe34dd4d01502614e7361b93594994c3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/contracts": "^1.0",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "conflict": {
+                "symfony/dependency-injection": "<3.4",
+                "symfony/process": "<3.3"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/config": "~3.4|~4.0",
+                "symfony/dependency-injection": "~3.4|~4.0",
+                "symfony/event-dispatcher": "~3.4|~4.0",
+                "symfony/lock": "~3.4|~4.0",
+                "symfony/process": "~3.4|~4.0"
+            },
+            "suggest": {
+                "psr/log-implementation": "For using the console logger",
+                "symfony/event-dispatcher": "",
+                "symfony/lock": "",
+                "symfony/process": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Console\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "https://symfony.com",
+            "time": "2018-11-27T07:40:59+00:00"
+        },
+        {
+            "name": "symfony/contracts",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/contracts.git",
+                "reference": "3edf0ab943d1985a356721952cba36ff31bd6e5f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/contracts/zipball/3edf0ab943d1985a356721952cba36ff31bd6e5f",
+                "reference": "3edf0ab943d1985a356721952cba36ff31bd6e5f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "require-dev": {
+                "psr/cache": "^1.0",
+                "psr/container": "^1.0"
+            },
+            "suggest": {
+                "psr/cache": "When using the Cache contracts",
+                "psr/container": "When using the Service contracts",
+                "symfony/cache-contracts-implementation": "",
+                "symfony/service-contracts-implementation": "",
+                "symfony/translation-contracts-implementation": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\": ""
+                },
+                "exclude-from-classmap": [
+                    "**/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "A set of abstractions extracted out of the Symfony components",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "time": "2018-11-24T09:35:08+00:00"
         },
         {
             "name": "symfony/debug",
@@ -1786,6 +1394,553 @@
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
             "time": "2018-12-01T10:04:56+00:00"
+        },
+        {
+            "name": "symfony/event-dispatcher",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/event-dispatcher.git",
+                "reference": "87bd8a44eadf28fc04d668f5e1875ddfe798bf6e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/87bd8a44eadf28fc04d668f5e1875ddfe798bf6e",
+                "reference": "87bd8a44eadf28fc04d668f5e1875ddfe798bf6e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/contracts": "^1.0"
+            },
+            "conflict": {
+                "symfony/dependency-injection": "<3.4"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/config": "~3.4|~4.0",
+                "symfony/dependency-injection": "~3.4|~4.0",
+                "symfony/expression-language": "~3.4|~4.0",
+                "symfony/stopwatch": "~3.4|~4.0"
+            },
+            "suggest": {
+                "symfony/dependency-injection": "",
+                "symfony/http-kernel": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\EventDispatcher\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony EventDispatcher Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-01-05T16:38:08+00:00"
+        },
+        {
+            "name": "symfony/filesystem",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/filesystem.git",
+                "reference": "b12244c29ced470fba69e20da3db97e53a6a918a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/b12244c29ced470fba69e20da3db97e53a6a918a",
+                "reference": "b12244c29ced470fba69e20da3db97e53a6a918a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/polyfill-ctype": "~1.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Filesystem\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Filesystem Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-01-03T09:16:58+00:00"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/finder.git",
+                "reference": "047be7e3450e5460f14c4a42a02c9811e2eda2cd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/047be7e3450e5460f14c4a42a02c9811e2eda2cd",
+                "reference": "047be7e3450e5460f14c4a42a02c9811e2eda2cd",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Finder\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Finder Component",
+            "homepage": "https://symfony.com",
+            "time": "2018-11-26T16:19:01+00:00"
+        },
+        {
+            "name": "symfony/options-resolver",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/options-resolver.git",
+                "reference": "3bc5c9e6eb367a5e55e51f51cb2262aa3a66eeb3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/options-resolver/zipball/3bc5c9e6eb367a5e55e51f51cb2262aa3a66eeb3",
+                "reference": "3bc5c9e6eb367a5e55e51f51cb2262aa3a66eeb3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\OptionsResolver\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony OptionsResolver Component",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "config",
+                "configuration",
+                "options"
+            ],
+            "time": "2019-01-03T09:16:58+00:00"
+        },
+        {
+            "name": "symfony/polyfill-ctype",
+            "version": "v1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/e3d826245268269cd66f8326bd8bc066687b4a19",
+                "reference": "e3d826245268269cd66f8326bd8bc066687b4a19",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-ctype": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                },
+                {
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
+                }
+            ],
+            "description": "Symfony polyfill for ctype functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "ctype",
+                "polyfill",
+                "portable"
+            ],
+            "time": "2018-08-06T14:22:27+00:00"
+        },
+        {
+            "name": "symfony/polyfill-mbstring",
+            "version": "v1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-mbstring.git",
+                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/c79c051f5b3a46be09205c73b80b346e4153e494",
+                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for the Mbstring extension",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "mbstring",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2018-09-21T13:07:52+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php70",
+            "version": "v1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php70.git",
+                "reference": "6b88000cdd431cd2e940caa2cb569201f3f84224"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/6b88000cdd431cd2e940caa2cb569201f3f84224",
+                "reference": "6b88000cdd431cd2e940caa2cb569201f3f84224",
+                "shasum": ""
+            },
+            "require": {
+                "paragonie/random_compat": "~1.0|~2.0|~9.99",
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php70\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ],
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.0+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2018-09-21T06:26:08+00:00"
+        },
+        {
+            "name": "symfony/polyfill-php72",
+            "version": "v1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php72.git",
+                "reference": "9050816e2ca34a8e916c3a0ae8b9c2fccf68b631"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/9050816e2ca34a8e916c3a0ae8b9c2fccf68b631",
+                "reference": "9050816e2ca34a8e916c3a0ae8b9c2fccf68b631",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php72\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2018-09-21T13:07:52+00:00"
+        },
+        {
+            "name": "symfony/process",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/process.git",
+                "reference": "1a01d2984ed07841fe3db2da69743f9b2ee14de7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/process/zipball/1a01d2984ed07841fe3db2da69743f9b2ee14de7",
+                "reference": "1a01d2984ed07841fe3db2da69743f9b2ee14de7",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Process\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Process Component",
+            "homepage": "https://symfony.com",
+            "time": "2018-11-26T16:19:01+00:00"
+        },
+        {
+            "name": "symfony/stopwatch",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/stopwatch.git",
+                "reference": "950e4c71f7f11ac52639abb86f560ab03e4b06c1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/950e4c71f7f11ac52639abb86f560ab03e4b06c1",
+                "reference": "950e4c71f7f11ac52639abb86f560ab03e4b06c1",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/contracts": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Stopwatch\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Stopwatch Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-01-03T09:16:58+00:00"
         },
         {
             "name": "symfony/translation",
@@ -1907,6 +2062,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "guzzlehttp/psr7": 20,
         "friendsofphp/php-cs-fixer": 20
     },
     "prefer-stable": false,
