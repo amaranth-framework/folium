@@ -28,7 +28,7 @@
     "scripts": {
         "lint": ".\/vendor\/bin\/php-cs-fixer fix src",
         "templ:jsonlint": ".\/vendor\/bin\/phptempl run --command=jsonlint --path=.\/src",
-        "templ:phpcsfixer": "vendor\/bin\/php-cs-fixer --no-interaction fix --rules=@PSR2 .\/src",
+        "templ:phpcsfixer": "vendor\/bin\/php-cs-fixer --no-interaction fix --rules=@PSR2 .\/src && vendor\/bin\/php-cs-fixer --no-interaction fix --rules=@Symfony .\/src",
         "templ:phplint": ".\/vendor\/bin\/phplint",
         "templ:yamllint": ".\/vendor\/bin\/phptempl run --command=yamllint --path=.\/src"
     },
@@ -40,7 +40,7 @@
     },
     "extra": {
         "hooks": {
-            "pre-commit": ".\/vendor\/bin\/phptempl run --command=jsonlint --path=.\/src && vendor\/bin\/php-cs-fixer --no-interaction fix --rules=@PSR2 .\/src && .\/vendor\/bin\/phplint && .\/vendor\/bin\/phptempl run --command=yamllint --path=.\/src"
+            "pre-commit": ".\/vendor\/bin\/phptempl run --command=jsonlint --path=.\/src && vendor\/bin\/php-cs-fixer --no-interaction fix --rules=@PSR2 .\/src && vendor\/bin\/php-cs-fixer --no-interaction fix --rules=@Symfony .\/src && .\/vendor\/bin\/phplint && .\/vendor\/bin\/phptempl run --command=yamllint --path=.\/src"
         }
     }
 }
