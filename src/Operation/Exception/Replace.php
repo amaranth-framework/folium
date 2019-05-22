@@ -21,7 +21,7 @@ namespace Itmcdev\Folium\Operation\Exception;
  * Exception used for cases data fails replacing.
  */
 class Replace extends \Exception
-{   
+{
     /**
      * Constructor
      */

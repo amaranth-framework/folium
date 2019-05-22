@@ -24,7 +24,7 @@ use Itmcdev\Folium\Operation\Crud\Delete;
 
 /**
  * CRUD Operation Group.
- * 
+ *
  * @method Controller setCreate(Create $create)
  * @method Controller setRead(Read $read)
  * @method Controller setUpdate(Update $update)

@@ -21,7 +21,7 @@ namespace Itmcdev\Folium\Operation\Exception;
  * Exception used for cases where controller's model type is not detected.
  */
 class Delete extends \Exception
-{   
+{
     /**
      * Constructor
      */

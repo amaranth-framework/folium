@@ -21,4 +21,5 @@ namespace Itmcdev\Folium\Exception;
  * Exception used for cases data fails creating.
  */
 class InvalidArgument extends \Exception
-{ }
+{
+}

@@ -43,7 +43,7 @@ class CrudUtils
 
     /**
      * Obtain the name of the options property which will request count functionality out of the Read operation.
-     * 
+     *
      * @param string $name
      * @return string
      */
