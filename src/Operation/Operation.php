@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2018 IT Media Connect
+ * Copyright 2018 IT Media Connect.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,16 +18,16 @@
 namespace Itmcdev\Folium\Operation;
 
 /**
- * Undocumented class
+ * Undocumented class.
  */
 class Operation
 {
     protected $modelClass = null;
 
     /**
-     * Constructor
+     * Constructor.
      *
-     * @param string $modelClass Class name used for model.
+     * @param string $modelClass class name used for model
      */
     public function __construct(string $modelClass = null)
     {
@@ -35,14 +35,16 @@ class Operation
     }
 
     /**
-     * Setter for a model's class
+     * Setter for a model's class.
      *
-     * @param string $modelClass Class name used for model.
+     * @param string $modelClass class name used for model
+     *
      * @return self
      */
     public function setModelClass(string $modelClass)
     {
         $this->modelClass = $modelClass;
+
         return $this;
     }
 

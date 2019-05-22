@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2018 IT Media Connect
+ * Copyright 2018 IT Media Connect.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,9 +23,9 @@ namespace Itmcdev\Folium\Exception;
 class UndefinedOperation extends \Exception
 {
     /**
-     * @param any $class
+     * @param any    $class
      * @param string $method
-     * @param array $arguments
+     * @param array  $arguments
      */
     public function __construct($class, $method, $arguments)
     {

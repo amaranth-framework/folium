@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2018 IT Media Connect
+ * Copyright 2018 IT Media Connect.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ namespace Itmcdev\Folium\Util;
  * NOTE: The bellow comment conviced me to not use HTTP statuses along with REST errors, and create my own set of
  * error codes.
  *
- * @link https://stackoverflow.com/a/46379701/665019
+ * @see https://stackoverflow.com/a/46379701/665019
  */
 class RestUtils extends CrudUtils
 {

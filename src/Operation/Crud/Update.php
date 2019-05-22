@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2018 IT Media Connect
+ * Copyright 2018 IT Media Connect.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ namespace Itmcdev\Folium\Operation\Crud;
 /**
  * Inteface for impelenting CRUD Update method.
  *
- * @link https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
+ * @see https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
  */
 interface Update
 {
@@ -40,10 +40,11 @@ interface Update
      *   [ "text" => "Do laundry" ] // this item will be created
      * ])
      *
-     * @param  array $items    Can be a single element or an array of elements.
-     * @param  array $criteria To be defined.
-     * @param  array $options  To be defined.
-     * @return array           Will return the ids of the elements updated.
+     * @param array $items    can be a single element or an array of elements
+     * @param array $criteria to be defined
+     * @param array $options  to be defined
+     *
+     * @return array will return the ids of the elements updated
      */
     public function update(
         array $items,

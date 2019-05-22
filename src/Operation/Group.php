@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2018 IT Media Connect
+ * Copyright 2018 IT Media Connect.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,20 +20,19 @@ namespace Itmcdev\Folium\Operation;
 use Itmcdev\Folium\Exception\UndefinedOperation;
 
 /**
- * Operation Group Abstract
+ * Operation Group Abstract.
  */
 abstract class Group
 {
-
     /**
-     * Undocumented variable
+     * Undocumented variable.
      *
      * @var string
      */
     protected $modelClass;
 
     /**
-     * Undocumented function
+     * Undocumented function.
      *
      * @return array
      */
@@ -43,27 +42,29 @@ abstract class Group
     }
 
     /**
-     * Magic function for calling methods
+     * Magic function for calling methods.
      *
      * @throws UndefinedOperation
      *
-     * @param  string $method
-     * @param  array  $arguments
+     * @param string $method
+     * @param array  $arguments
+     *
      * @return any
      */
     public function __call(string $method, array $arguments)
     {
-        if (array_search($method, $this->operations()) !== false) {
+        if (false !== array_search($method, $this->operations())) {
             return call_user_func_array(
                 array($this->$method, $method),
                 $arguments
             );
         }
-                
-        if (strpos($method, 'set') !== false) {
+
+        if (false !== strpos($method, 'set')) {
             $operation = strtolower(substr($method, 3));
-            if (array_search($operation, $this->operations()) !== false) {
+            if (false !== array_search($operation, $this->operations())) {
                 $this->$operation = $arguments[0];
+
                 return $this;
             }
         }
@@ -72,9 +73,10 @@ abstract class Group
     }
 
     /**
-     * Setter for controller's model class
+     * Setter for controller's model class.
      *
-     * @param  string $modelClass Class name used for model
+     * @param string $modelClass Class name used for model
+     *
      * @return self
      */
     public function setModelClass(string $modelClass)
@@ -86,11 +88,12 @@ abstract class Group
             }
             $this->$operation->setModelClass($modelClass);
         }
+
         return $this;
     }
 
     /**
-     * Undocumented function
+     * Undocumented function.
      *
      * @return string
      */

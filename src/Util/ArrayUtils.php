@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2018 IT Media Connect
+ * Copyright 2018 IT Media Connect.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,19 @@
 namespace Itmcdev\Folium\Util;
 
 /**
- * Undocumented class
+ * Undocumented class.
  */
 class ArrayUtils
 {
     /**
      * @param array $arr
-     * @return boolean
+     *
+     * @return bool
      */
     public static function isNumeric(array $arr)
     {
-        return (
+        return
             $arr === array() || range(0, count($arr) - 1) === array_keys($arr)
-        );
+        ;
     }
 }

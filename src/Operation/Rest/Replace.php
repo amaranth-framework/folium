@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2018 IT Media Connect
+ * Copyright 2018 IT Media Connect.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,9 +31,10 @@ interface Replace
      *   [ "text" => "Do laundry" ] // this item will be created
      * ])
      *
-     * @param  array $items    Can be a single element or an array of elements.
-     * @param  array $options  To be defined.
-     * @return array           Will return the ids of the elements updated.
+     * @param array $items   can be a single element or an array of elements
+     * @param array $options to be defined
+     *
+     * @return array will return the ids of the elements updated
      */
     public function replace(array $items, array $options = []);
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2018 IT Media Connect
+ * Copyright 2018 IT Media Connect.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ namespace Itmcdev\Folium\Operation\Rest;
  * Inteface for impelenting REST Create method.
  *
  * @see \Itmcdev\Folium\Operation\Crud\Create
- * @link https://en.wikipedia.org/wiki/Representational_state_transfer
+ * @see https://en.wikipedia.org/wiki/Representational_state_transfer
  */
 interface Create extends \Itmcdev\Folium\Operation\Crud\Create
 {

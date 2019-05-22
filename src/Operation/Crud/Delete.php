@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2018 IT Media Connect
+ * Copyright 2018 IT Media Connect.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ namespace Itmcdev\Folium\Operation\Crud;
 /**
  * Inteface for impelenting CRUD Delete method.
  *
- * @link https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
+ * @see https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
  */
 interface Delete
 {
@@ -45,10 +45,9 @@ interface Delete
      *   [ 'id', '>', 10 ]
      * ])
      *
-     * @param  array $items    Can be a single element or an array of elements
-     * @param  array $criteria To be defined.
-     * @param  array $options  To be defined.
-     * @return void
+     * @param array $items    Can be a single element or an array of elements
+     * @param array $criteria to be defined
+     * @param array $options  to be defined
      */
     public function delete(
         array $items = [],

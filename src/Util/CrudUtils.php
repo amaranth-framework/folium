@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2018 IT Media Connect
+ * Copyright 2018 IT Media Connect.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@
 namespace Itmcdev\Folium\Util;
 
 /**
- * Undocumented class
+ * Undocumented class.
  */
 class CrudUtils
 {
@@ -31,20 +31,22 @@ class CrudUtils
 
     /**
      * @param string $model
-     * @return boolean
+     *
+     * @return bool
      */
     public static function canSoftDelete($modelClass)
     {
-        return (
+        return
             method_exists($modelClass, 'canSoftDelete') &&
             $modelClass::canSoftDelete()
-        );
+        ;
     }
 
     /**
      * Obtain the name of the options property which will request count functionality out of the Read operation.
      *
      * @param string $name
+     *
      * @return string
      */
     public static function countProperty(string $name = null)
@@ -52,6 +54,7 @@ class CrudUtils
         if (!empty($name)) {
             self::$_countProperty = $name;
         }
+
         return self::$_countProperty;
     }
 
@@ -59,6 +62,7 @@ class CrudUtils
      * Obtain the name of the options property which will request deleted functionality out of the Read operation.
      *
      * @param string $name
+     *
      * @return string
      */
     public static function deletedProperty(string $name = null)
@@ -66,6 +70,7 @@ class CrudUtils
         if (!empty($name)) {
             self::$_deletedProperty = $name;
         }
+
         return self::$_deletedProperty;
     }
 
@@ -73,6 +78,7 @@ class CrudUtils
      * Obtain the name of the options property which will request permanentDelete functionality out of the Read operation.
      *
      * @param string $name
+     *
      * @return string
      */
     public static function permanentDeleteProperty(string $name = null)
@@ -80,6 +86,7 @@ class CrudUtils
         if (!empty($name)) {
             self::$_permanentDeleteProperty = $name;
         }
+
         return self::$_permanentDeleteProperty;
     }
 }

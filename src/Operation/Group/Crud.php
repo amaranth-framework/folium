@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2018 IT Media Connect
+ * Copyright 2018 IT Media Connect.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ use Itmcdev\Folium\Operation\Crud\Delete;
 class Crud extends \Itmcdev\Folium\Operation\Group
 {
     /**
-     * Undocumented function
+     * Undocumented function.
      *
      * @return array
      */

@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2018 IT Media Connect
+ * Copyright 2018 IT Media Connect.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ namespace Itmcdev\Folium\Operation\Rest;
 /**
  * Inteface for impelenting REST Retreive method.
  *
- * @link https://en.wikipedia.org/wiki/Representational_state_transfer
+ * @see https://en.wikipedia.org/wiki/Representational_state_transfer
  */
 interface Retreive
 {
@@ -36,10 +36,11 @@ interface Retreive
      *   [ 'id', 'name', 'email' ]
      * )
      *
-     * @param  array $id       ID of the resource to retreive.
-     * @param  array $fields   Fields to obtain.
-     * @param  array $options  Options sent ot the method, like primary key of the model.
-     * @return array              Resource data.
+     * @param array $id      ID of the resource to retreive
+     * @param array $fields  fields to obtain
+     * @param array $options options sent ot the method, like primary key of the model
+     *
+     * @return array resource data
      */
     public function retreive($id, array $fields = [], $options = []);
 }

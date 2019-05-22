@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2018 IT Media Connect
+ * Copyright 2018 IT Media Connect.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ namespace Itmcdev\Folium\Operation\Rest;
 /**
  * Inteface for impelenting REST List method.
  *
- * @link https://en.wikipedia.org/wiki/Representational_state_transfer
+ * @see https://en.wikipedia.org/wiki/Representational_state_transfer
  */
 interface Fetch
 {
@@ -41,10 +41,11 @@ interface Fetch
      *
      * list([], [], [ '__count' => true ])
      *
-     * @param array      $criteria Criteria to filter database data.
-     * @param array      $fields   Fields to obtain.
-     * @param array      $options  Fields to obtain.
-     * @return array|int           Array of items matching the criteria and having only the fields required or their count.
+     * @param array $criteria criteria to filter database data
+     * @param array $fields   fields to obtain
+     * @param array $options  fields to obtain
+     *
+     * @return array|int array of items matching the criteria and having only the fields required or their count
      */
     public function fetch(
         array $criteria = [],

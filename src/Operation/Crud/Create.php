@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2018 IT Media Connect
+ * Copyright 2018 IT Media Connect.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ namespace Itmcdev\Folium\Operation\Crud;
 /**
  * Inteface for impelenting CRUD Create method.
  *
- * @link https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
+ * @see https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
  */
 interface Create
 {
@@ -37,9 +37,10 @@ interface Create
      *   [ "text" => "Do laundry" ]
      * ])
      *
-     * @param  array $items    Can be a single element or an array of elements
-     * @param  array $criteria To be defined.
-     * @return array           Will return an array of ids for the models that have been saved in the database.
+     * @param array $items    Can be a single element or an array of elements
+     * @param array $criteria to be defined
+     *
+     * @return array will return an array of ids for the models that have been saved in the database
      */
     public function create(array $items, array $criteria = []);
 }

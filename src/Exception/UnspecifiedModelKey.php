@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2018 IT Media Connect
+ * Copyright 2018 IT Media Connect.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,8 +23,8 @@ namespace Itmcdev\Folium\Exception;
 class UnspecifiedModelKey extends \Exception
 {
     /**
-     * @param any $controller
-     * @param str $method
+     * @param any    $controller
+     * @param string $method
      */
     public function __construct(
         string $modelClass,
