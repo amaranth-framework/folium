@@ -1,5 +1,5 @@
 {
-    "name": "itmcdev/folium",
+    "name": "itmcdev\/folium",
     "description": "PHP Wrapper for RESTFul applications",
     "type": "library",
     "license": "MIT",
@@ -14,16 +14,33 @@
         "php": "^7.1"
     },
     "autoload": {
-        "classmap": [
-        ],
+        "classmap": [],
         "psr-4": {
-            "Itmcdev\\Folium\\": "src/"
+            "Itmcdev\\Folium\\": "src\/"
         }
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.14@dev"
+        "friendsofphp\/php-cs-fixer": "^2.14@dev",
+        "dragoscirjan\/templ": "dev-develop",
+        "overtrue\/phplint": "dev-master",
+        "symfony\/yaml": "^4.4@dev"
     },
     "scripts": {
-        "lint": "./vendor/bin/php-cs-fixer fix src"
+        "lint": ".\/vendor\/bin\/php-cs-fixer fix src",
+        "templ:jsonlint": ".\/vendor\/bin\/phptempl run --command=jsonlint --path=.\/src",
+        "templ:phpcsfixer": "vendor\/bin\/php-cs-fixer --no-interaction fix --rules=@PSR2 .\/src",
+        "templ:phplint": ".\/vendor\/bin\/phplint",
+        "templ:yamllint": ".\/vendor\/bin\/phptempl run --command=yamllint --path=.\/src"
+    },
+    "repositories": {
+        "dragoscirjan\/templ": {
+            "type": "vcs",
+            "url": "https:\/\/github.com\/dragoscirjan\/templ-php.git"
+        }
+    },
+    "extra": {
+        "hooks": {
+            "pre-commit": ".\/vendor\/bin\/phptempl run --command=jsonlint --path=.\/src && vendor\/bin\/php-cs-fixer --no-interaction fix --rules=@PSR2 .\/src && .\/vendor\/bin\/phplint && .\/vendor\/bin\/phptempl run --command=yamllint --path=.\/src"
+        }
     }
 }
